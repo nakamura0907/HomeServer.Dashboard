@@ -24,6 +24,10 @@ func main() {
 		Filesystem: http.FS(webAssets),
 	}))
 
-	e.Logger.Fatal(e.Start(":1323"))
+	apiGroup := e.Group("/api")
+	apiGroup.GET("", func(c echo.Context) error {
+		return c.String(http.StatusOK, "/api")
+	})
 
+	e.Logger.Fatal(e.Start(":1323"))
 }
