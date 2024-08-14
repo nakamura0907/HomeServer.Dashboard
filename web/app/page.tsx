@@ -59,6 +59,7 @@ export default function Home() {
             <input
               type="text"
               name="title"
+              id="title"
               value={formValues.title}
               onChange={(e) => handleChangeFormValue("title", e.target.value)}
             />
@@ -68,6 +69,7 @@ export default function Home() {
             <input
               type="text"
               name="url"
+              id="url"
               value={formValues.url}
               onChange={(e) => handleChangeFormValue("url", e.target.value)}
             />
