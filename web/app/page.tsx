@@ -1,10 +1,6 @@
 "use client";
+import type { DashboardItem } from "@/src/entities/dashboard-item";
 import { FormEvent, useState } from "react";
-
-type DashboardItem = {
-  title: string;
-  url: string;
-};
 
 type FormValues = DashboardItem;
 
