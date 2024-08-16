@@ -26,7 +26,14 @@ func main() {
 
 	apiGroup := e.Group("/api")
 	apiGroup.GET("", func(c echo.Context) error {
-		return c.String(http.StatusOK, "/api")
+		response := map[string]interface{}{
+			"items": map[string]string{
+				"title": "Example",
+				"url":   "https://example.com",
+			},
+		}
+
+		return c.JSON(http.StatusOK, response)
 	})
 
 	e.Logger.Fatal(e.Start(":1323"))
