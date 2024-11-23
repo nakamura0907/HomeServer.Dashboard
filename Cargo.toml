@@ -1,0 +1,22 @@
+[package]
+name = "homeserver-dashboard"
+version = "0.0.0"
+edition.workspace = true
+
+[[bin]]
+name = "homeserver-dashboard-cli"
+path = "src/bin/cli.rs"
+
+[workspace]
+members = [
+    "creates/driver"
+]
+
+[workspace.package]
+edition = "2021"
+
+[dependencies]
+driver = "0.0.0"
+
+[patch.crates-io]
+driver = { path = "creates/driver" }
