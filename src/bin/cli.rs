@@ -1,5 +1,6 @@
-use driver::cli;
+use driver::logger;
 
 fn main() {
-    cli::run();
+    logger::setup();
+    println!("Hello, world!");
 }
