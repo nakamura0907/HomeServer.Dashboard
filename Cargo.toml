@@ -5,7 +5,7 @@ edition.workspace = true
 
 [[bin]]
 name = "homeserver-dashboard-cli"
-path = "src/bin/cli.rs"
+path = "src/bin/cli/main.rs"
 
 [workspace]
 members = [
